@@ -1,4 +1,5 @@
 name: Approval
+run-name: Approval [id ${{ github.run_id }}-${{ github.run_attempt }}]
 on:
   workflow_dispatch:
 jobs:
