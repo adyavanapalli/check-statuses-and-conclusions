@@ -1,6 +1,5 @@
 name: Approval
 on:
-  push:
   workflow_dispatch:
 jobs:
   j1:
