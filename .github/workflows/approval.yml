@@ -8,5 +8,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: s1
-        run: echo "Approval received!"
+        run: sleep 15 && echo "Approval received!"
         
