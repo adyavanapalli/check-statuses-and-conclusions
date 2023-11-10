@@ -1,0 +1,11 @@
+name: Concurrency
+on:
+  workflow_dispatch:
+
+concurrency: concurrency
+jobs:
+  j1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: s1
+        run: echo "Concurrency"
