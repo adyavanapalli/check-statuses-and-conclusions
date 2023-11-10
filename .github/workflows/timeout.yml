@@ -1,0 +1,12 @@
+name: Timeout
+on:
+  push:
+  workflow_dispatch:
+jobs:
+  j1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: s1
+        run: |
+          sleep 120 && echo "unreachable"
+    timeout-minutes: 1
