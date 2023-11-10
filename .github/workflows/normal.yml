@@ -1,0 +1,9 @@
+name: Normal
+on:
+  workflow_dispatch:
+jobs:
+  j1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: s1
+        run: echo "Normal"
