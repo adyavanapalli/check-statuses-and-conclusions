@@ -1,0 +1,9 @@
+name: Cancelled
+on:
+  workflow_dispatch:
+jobs:
+  j1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: s1
+        run: echo "Sleeping for 5 minutes." && sleep $((5 * 60))
