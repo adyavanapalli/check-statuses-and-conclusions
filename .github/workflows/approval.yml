@@ -1,0 +1,12 @@
+name: Approval
+on:
+  push:
+  workflow_dispatch:
+jobs:
+  j1:
+    environment: Approval
+    runs-on: ubuntu-latest
+    steps:
+      - name: s1
+        run: echo "Approval received!"
+        
