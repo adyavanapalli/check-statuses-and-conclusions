@@ -1,0 +1,17 @@
+name: Context
+on:
+  workflow_dispatch:
+jobs:
+  j1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Output Contexts
+        run: |
+          echo "GITHUB: ${{ toJson(github) }}"
+          echo "ENV: ${{ toJson(env) }}"
+          echo "VARS: ${{ toJson(vars) }}"
+          echo "JOB: ${{ toJson(job) }}"
+          echo "STEPS: ${{ toJson(steps) }}"
+          echo "RUNNER: ${{ toJson(runner) }}"
+          echo "SECRETS: ${{ toJson(secrets) }}"
+          echo "INPUTS: ${{ toJson(inputs) }}"
