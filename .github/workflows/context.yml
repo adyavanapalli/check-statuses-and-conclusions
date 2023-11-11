@@ -1,6 +1,14 @@
 name: Context
 on:
   workflow_dispatch:
+    inputs:
+      environment-code:
+        description: The environment code to deploy to.
+        required: true
+        type: choice
+        options:
+          - Env01
+          - Env02
 jobs:
   j1:
     runs-on: ubuntu-latest
