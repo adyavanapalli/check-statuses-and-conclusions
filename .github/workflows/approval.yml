@@ -9,6 +9,7 @@ jobs:
       - name: s1
         run: sleep 15 && echo "No Approval!"
   j2:
+    needs: j1
     environment: Approval
     runs-on: ubuntu-latest
     steps:
