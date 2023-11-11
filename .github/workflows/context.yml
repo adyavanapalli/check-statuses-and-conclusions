@@ -7,11 +7,34 @@ jobs:
     steps:
       - name: Output Contexts
         run: |
+          echo "::group::GITHUB"
           echo "GITHUB: ${{ toJson(github) }}"
+          echo "::endgroup::"
+
+          echo "::group::ENV"
           echo "ENV: ${{ toJson(env) }}"
+          echo "::endgroup::"
+
+          echo "::group::VARS"
           echo "VARS: ${{ toJson(vars) }}"
+          echo "::endgroup::"
+
+          echo "::group::JOB"
           echo "JOB: ${{ toJson(job) }}"
+          echo "::endgroup::"
+
+          echo "::group::STEPS"
           echo "STEPS: ${{ toJson(steps) }}"
+          echo "::endgroup::"
+
+          echo "::group::RUNNER"
           echo "RUNNER: ${{ toJson(runner) }}"
+          echo "::endgroup::"
+
+          echo "::group::SECRETS"
           echo "SECRETS: ${{ toJson(secrets) }}"
+          echo "::endgroup::"
+
+          echo "::group::INPUTS"
           echo "INPUTS: ${{ toJson(inputs) }}"
+          echo "::endgroup::"
