@@ -4,6 +4,11 @@ on:
   workflow_dispatch:
 jobs:
   j1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: s1
+        run: sleep 15 && echo "No Approval!"
+  j2:
     environment: Approval
     runs-on: ubuntu-latest
     steps:
